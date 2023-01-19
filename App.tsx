@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components/native";
 import theme from "./src/theme";
 
 import { Loading } from "@components/Loading";
-import { Players } from "@screens/Players";
+import { Routes } from "@routes/index";
 import { StatusBar } from "react-native";
 
 export default function App(): JSX.Element {
@@ -17,7 +17,7 @@ export default function App(): JSX.Element {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Players /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
