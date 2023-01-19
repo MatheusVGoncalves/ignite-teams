@@ -107,7 +107,9 @@ export function Players() {
       },
       {
         text: "Sim",
-        onPress: () => groupRemove,
+        onPress: () => {
+          groupRemove();
+        },
       },
     ]);
   };
