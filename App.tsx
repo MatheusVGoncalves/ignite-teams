@@ -1,10 +1,10 @@
 import { Roboto_400Regular, Roboto_700Bold } from "@expo-google-fonts/roboto";
-import { Groups } from "@screens/Groups";
 import { useFonts } from "expo-font";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components/native";
 import theme from "./src/theme";
 
 import { Loading } from "@components/Loading";
+import { Players } from "@screens/Players";
 import { StatusBar } from "react-native";
 
 export default function App(): JSX.Element {
@@ -17,7 +17,7 @@ export default function App(): JSX.Element {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <Players /> : <Loading />}
     </ThemeProvider>
   );
 }
